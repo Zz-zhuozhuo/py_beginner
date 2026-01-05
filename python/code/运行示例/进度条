@@ -1,0 +1,9 @@
+from time import sleep
+
+def progress_bar(sleep_time):
+
+    print("开始加载...")
+    for i in range(101):
+        print(f"{i * '█'}{(100 - i) * ' '} {i}%", end='\r')
+        sleep(sleep_time)
+    print("\n加载完成!")
